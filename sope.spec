@@ -1,4 +1,4 @@
-%define sope_source_version 5.1.0
+%define sope_source_version 5.1.1
 %define sope_release 1
 %define sope_major_version 4
 %define sope_minor_version 9
