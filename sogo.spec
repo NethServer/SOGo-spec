@@ -449,6 +449,9 @@ fi
 
 # ********************************* changelog *************************
 %changelog
+* Wed Jul 7 2021 Stephane de Labrusse <stephdl@de-labrusse.fr>
+- Bump to 5.1.1
+
 * Tue Apr 6 2021 Stephane de Labrusse <stephdl@de-labrusse.fr>
 - Bump to 5.1.0
 
