@@ -14,6 +14,8 @@ Now go to build sogo build dependencies. You have to install nethserver-mock(one
 
   `dist=ns7 mockcfg=nethserver-7-x86_64 make-rpms sope.spec`
 
+  `dist=ns7 mockcfg=nethserver-7-x86_64 make-rpms ytnef.spec`
+
 Once done we need to create a local repository because sogo needs some build dependencies you built  
 
 * sope49-appserver-devel-4.9-20161202_324.ns7.x86_64
@@ -24,6 +26,7 @@ Once done we need to create a local repository because sogo needs some build dep
 * sope49-gdl1-devel-4.9-20161202_324.ns7.x86_64
 * sope49-sbjson-devel-2.3.1-20161202_324.ns7.x86_64
 * libwbxml-devel-0.11.2-3.ns7.x86_64
+* ytnef-1.9.3.ns7.x86_64
 
 Therefore you must create a local repository where your files are. For example
 
