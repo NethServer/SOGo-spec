@@ -8,6 +8,8 @@ First clone the sogo spec
   
 Then inside adjust which version of the rpm you want, for that you can look http://packages.inverse.ca/SOGo/nightly/3/rhel/7/x86_64/RPMS/ in the nightly repo or https://sogo.nu/download.html in the web page. This is an https://github.com/stephdl/SOGo-spec/commit/5fcf04b0f7e73a79e0567d533597d3da2640e021 example 
 
+You can use the script buildsogo.sh to build all dependencies and create the rpms OR follow the manual instructions below. Keep in mind you have to patch the mock configuration to use the local ''sogo repository'' (see below)
+
 Now go to build sogo build dependencies. You have to install nethserver-mock(one simple way, or add separatly all needed rpms)
 
   `dist=ns7 mockcfg=nethserver-7-x86_64 make-rpms libwbxml.spec`
@@ -40,7 +42,7 @@ modify accordingly where your files are and paste
 
 Obviously, this modification must be done on all mock architectures. For initiating your local repository (install first createrepo)
 
-  `createrepo /home/lsd/dev/git_work/SOGo-spec`
+  `createrepo .`
 
 Now you can build by
 
