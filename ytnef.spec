@@ -40,6 +40,10 @@ V=1 %{__make} %{?_smp_mflags}
 %{_libdir}/pkgconfig/libytnef.pc
 
 %changelog
+* Fri Sep 17 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 1:1.9.3-3
+- Rebuild to be compatible with the build of SOGo, the include dir path is 
+- not expected by the sogo code. It expects to be at the root of /usr/include
+
 * Fri Jan 31 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1:1.9.3-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
