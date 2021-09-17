@@ -506,6 +506,8 @@ rm -fr ${RPM_BUILD_ROOT}
 
 # ********************************* changelog *************************
 %changelog
+* Fri Sep 17 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.2.0
+- Bump to 5.2.0
 * Tue Apr 6 2021 Stephane de Labrusse <stephdl@de-labrusse.fr>
 - Bump to 5.1.0
 * Tue Oct 27 2020 Stephane de Labrusse <stephdl@de-labrusse.fr>
