@@ -33,7 +33,7 @@ URL:          http://www.inverse.ca/contributions/sogo.html
 Group:        Productivity/Groupware
 Source:       https://github.com/inverse-inc/sogo/archive/SOGo-%{sogo_version}.tar.gz
 Prefix:       /usr
-AutoReqProv:  off
+AutoReqProv:  no
 Requires:     gnustep-base >= 1.23, sope%{sope_major_version}%{sope_minor_version}-core, httpd, sope%{sope_major_version}%{sope_minor_version}-core, sope%{sope_major_version}%{sope_minor_version}-appserver, sope%{sope_major_version}%{sope_minor_version}-ldap, sope%{sope_major_version}%{sope_minor_version}-cards >= %{sogo_version}, sope%{sope_major_version}%{sope_minor_version}-gdl1-contentstore >= %{sogo_version}, sope%{sope_major_version}%{sope_minor_version}-sbjson, libmemcached, memcached, tmpwatch, libzip, ytnef = 1:1.9.3
 BuildRoot:    %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  gcc-objc gnustep-base gnustep-make gnustep-base-devel sope%{sope_major_version}%{sope_minor_version}-appserver-devel sope%{sope_major_version}%{sope_minor_version}-core-devel sope%{sope_major_version}%{sope_minor_version}-ldap-devel sope%{sope_major_version}%{sope_minor_version}-mime-devel sope%{sope_major_version}%{sope_minor_version}-xml-devel sope%{sope_major_version}%{sope_minor_version}-gdl1-devel sope%{sope_major_version}%{sope_minor_version}-sbjson-devel libmemcached-devel sed libcurl-devel openldap-devel %{?oc_build_depends} libzip-devel ytnef = 1:1.9.3
@@ -87,7 +87,7 @@ and to reduce the load of the transactions on the server.
 Summary:      Command-line toolsuite for SOGo
 Group:        Productivity/Groupware
 Requires:     sogo = %{sogo_version}
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sogo-tool
 Administrative tool for SOGo that provides the following internal commands:
@@ -99,7 +99,7 @@ Administrative tool for SOGo that provides the following internal commands:
 %package -n sogo-slapd-sockd
 Summary:      SOGo backend for slapd and back-sock
 Group:        Productivity/Groupware
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sogo-slapd-sockd
 SOGo backend for slapd and back-sock, enabling access to private addressbooks
@@ -108,7 +108,7 @@ via LDAP.
 %package -n sogo-ealarms-notify
 Summary:      SOGo utility for executing email alarms
 Group:        Productivity/Groupware
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sogo-ealarms-notify
 SOGo utility executed each minute via a cronjob for executing email alarms.
@@ -118,7 +118,7 @@ Summary:      SOGo module to handle ActiveSync requests
 Group:        Productivity/Groupware
 Requires:     libwbxml, sogo = %{sogo_version}
 BuildRequires: libwbxml-devel
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sogo-activesync
 SOGo module to handle ActiveSync requests
@@ -126,7 +126,7 @@ SOGo module to handle ActiveSync requests
 %package -n sogo-devel
 Summary:      Development headers and libraries for SOGo
 Group:        Development/Libraries/Objective C
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sogo-devel
 Development headers and libraries for SOGo. Needed to create modules.
@@ -135,7 +135,7 @@ Development headers and libraries for SOGo. Needed to create modules.
 Summary:      Storage backend for folder abstraction.
 Group:        Development/Libraries/Objective C
 Requires:     sope%{sope_major_version}%{sope_minor_version}-gdl1
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sope%{sope_major_version}%{sope_minor_version}-gdl1-contentstore
 The storage backend implements the "low level" folder abstraction, which is
@@ -148,7 +148,7 @@ name "SOPE" (SKYRiX Object Publishing Environment) is inspired by ZOPE.
 Summary:      Development files for the GNUstep database libraries
 Group:        Development/Libraries/Objective C
 Requires:     sope%{sope_major_version}%{sope_minor_version}-gdl1
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sope%{sope_major_version}%{sope_minor_version}-gdl1-contentstore-devel
 This package contains the header files for SOPE's GDLContentStore library.
@@ -159,7 +159,7 @@ name "SOPE" (SKYRiX Object Publishing Environment) is inspired by ZOPE.
 %package -n sope%{sope_major_version}%{sope_minor_version}-cards
 Summary:      SOPE versit parsing library for iCal and VCard formats
 Group:        Development/Libraries/Objective C
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sope%{sope_major_version}%{sope_minor_version}-cards
 SOPE versit parsing library for iCal and VCard formats
@@ -168,7 +168,7 @@ SOPE versit parsing library for iCal and VCard formats
 Summary:      SOPE versit parsing library for iCal and VCard formats
 Group:        Development/Libraries/Objective C
 Requires:     sope%{sope_major_version}%{sope_minor_version}-cards
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description -n sope%{sope_major_version}%{sope_minor_version}-cards-devel
 SOPE versit parsing library for iCal and VCard formats
@@ -177,7 +177,7 @@ SOPE versit parsing library for iCal and VCard formats
 %package openchange-backend
 Summary:      SOGo backend for OpenChange
 Group:        Productivity/Groupware
-AutoReqProv:  off
+AutoReqProv:  no
 
 %description openchange-backend
 SOGo backend for OpenChange
