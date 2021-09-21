@@ -1,4 +1,4 @@
-%define sogo_version 5.1.1
+%define sogo_version 5.2.0
 %define sogo_release 1
 %define sope_major_version 4
 %define sope_minor_version 9
@@ -34,9 +34,9 @@ Group:        Productivity/Groupware
 Source:       https://github.com/inverse-inc/sogo/archive/SOGo-%{sogo_version}.tar.gz
 Prefix:       /usr
 AutoReqProv:  no
-Requires:     gnustep-base >= 1.23, sope%{sope_major_version}%{sope_minor_version}-core, httpd, sope%{sope_major_version}%{sope_minor_version}-core, sope%{sope_major_version}%{sope_minor_version}-appserver, sope%{sope_major_version}%{sope_minor_version}-ldap, sope%{sope_major_version}%{sope_minor_version}-cards >= %{sogo_version}, sope%{sope_major_version}%{sope_minor_version}-gdl1-contentstore >= %{sogo_version}, sope%{sope_major_version}%{sope_minor_version}-sbjson, libmemcached, memcached, tmpwatch, libzip
+Requires:     gnustep-base >= 1.23, sope%{sope_major_version}%{sope_minor_version}-core, httpd, sope%{sope_major_version}%{sope_minor_version}-core, sope%{sope_major_version}%{sope_minor_version}-appserver, sope%{sope_major_version}%{sope_minor_version}-ldap, sope%{sope_major_version}%{sope_minor_version}-cards >= %{sogo_version}, sope%{sope_major_version}%{sope_minor_version}-gdl1-contentstore >= %{sogo_version}, sope%{sope_major_version}%{sope_minor_version}-sbjson, libmemcached, memcached, tmpwatch, libzip, ytnef = 1:1.9.3
 BuildRoot:    %{_tmppath}/%{name}-%{version}-%{release}
-BuildRequires:  gcc-objc gnustep-base gnustep-make gnustep-base-devel sope%{sope_major_version}%{sope_minor_version}-appserver-devel sope%{sope_major_version}%{sope_minor_version}-core-devel sope%{sope_major_version}%{sope_minor_version}-ldap-devel sope%{sope_major_version}%{sope_minor_version}-mime-devel sope%{sope_major_version}%{sope_minor_version}-xml-devel sope%{sope_major_version}%{sope_minor_version}-gdl1-devel sope%{sope_major_version}%{sope_minor_version}-sbjson-devel libmemcached-devel sed libcurl-devel openldap-devel %{?oc_build_depends} libzip-devel
+BuildRequires:  gcc-objc gnustep-base gnustep-make gnustep-base-devel sope%{sope_major_version}%{sope_minor_version}-appserver-devel sope%{sope_major_version}%{sope_minor_version}-core-devel sope%{sope_major_version}%{sope_minor_version}-ldap-devel sope%{sope_major_version}%{sope_minor_version}-mime-devel sope%{sope_major_version}%{sope_minor_version}-xml-devel sope%{sope_major_version}%{sope_minor_version}-gdl1-devel sope%{sope_major_version}%{sope_minor_version}-sbjson-devel libmemcached-devel sed libcurl-devel openldap-devel %{?oc_build_depends} libzip-devel ytnef = 1:1.9.3
 
 
 # Required by MS Exchange freebusy lookups
@@ -187,13 +187,6 @@ SOGo backend for OpenChange
 %prep
 rm -fr ${RPM_BUILD_ROOT}
 %setup -q -n sogo-SOGo-%{sogo_version}
-
-
-# small tweak to the python script for RHEL5
-# if hex(sys.hexversion) < 0x02060000
-#%if %{python_sys_pyver} < 33947648
-#  sed -i 's!/usr/bin/env python!/usr/bin/env python2.6!' Scripts/openchange_user_cleanup
-#%endif
 
 
 # ****************************** build ********************************
@@ -449,6 +442,9 @@ fi
 
 # ********************************* changelog *************************
 %changelog
+* Fri Sep 17 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.2.0
+- Bump to 5.2.0
+
 * Wed Jul 7 2021 Stephane de Labrusse <stephdl@de-labrusse.fr>
 - Bump to 5.1.1
 
