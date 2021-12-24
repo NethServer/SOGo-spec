@@ -1,4 +1,4 @@
-%define sope_source_version 5.2.0
+%define sope_source_version 5.4.0
 %define sope_release 1
 %define sope_major_version 4
 %define sope_minor_version 9
@@ -506,6 +506,8 @@ rm -fr ${RPM_BUILD_ROOT}
 
 # ********************************* changelog *************************
 %changelog
+* Fri Dec 24 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.4.0
+- Bump to 5.4
 * Fri Sep 17 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.2.0
 - Bump to 5.2.0
 * Tue Apr 6 2021 Stephane de Labrusse <stephdl@de-labrusse.fr>
