@@ -1,4 +1,4 @@
-%define sogo_version 5.2.0
+%define sogo_version 5.4.0
 %define sogo_release 1
 %define sope_major_version 4
 %define sope_minor_version 9
@@ -442,6 +442,9 @@ fi
 
 # ********************************* changelog *************************
 %changelog
+* Fri Dec 24 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.4.0
++ - Bump to 5.4
+
 * Fri Sep 17 2021 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.2.0
 - Bump to 5.2.0
 
