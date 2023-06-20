@@ -1,4 +1,4 @@
-%define sope_source_version 5.8.2
+%define sope_source_version 5.8.3
 %define sope_release 1
 %define sope_major_version 4
 %define sope_minor_version 9
@@ -506,6 +506,8 @@ rm -fr ${RPM_BUILD_ROOT}
 
 # ********************************* changelog *************************
 %changelog
+* Tue Jun 20 2023 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.8.3
+- Bump to 5.8.3
 * Wed Apr 05 2023 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.8.2
 - Bump to 5.8.2
 * Tue Aug 09 2022 stephane de Labrusse <stephdl@de-labrusse.fr> - 5.7.0
