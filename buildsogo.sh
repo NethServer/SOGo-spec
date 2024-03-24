@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e 
 echo ""
 echo "### Build Libwbmxl"
 mockcfg=epel-7-x86_64 make-rpms libwbxml.spec
