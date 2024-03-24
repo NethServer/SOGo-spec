@@ -11,7 +11,7 @@
 %global oc_build_depends samba4 openchange
 %endif
 
-%{!?python_sys_pyver: %global python_sys_pyver %(/usr/bin/python -c "import sys; print sys.hexversion")}
+%{!?python_sys_pyver: %global python_sys_pyver %(/usr/bin/python -c "import sys; print (sys.hexversion)")}
 
 # Systemd for fedora >= 17 or el 7
 %if 0%{?fedora} >= 17 || 0%{?rhel} >= 7
